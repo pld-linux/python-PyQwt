@@ -16,14 +16,14 @@ Source0:	http://dl.sourceforge.net/pyqwt/%{module}-%{version}.tar.gz
 URL:		http://pyqwt.sourceforge.net/
 BuildRequires:	python-PyQt-devel
 BuildRequires:	python-devel >= 1:2.3
+%{?with_numeric:BuildRequires:	python-Numeric-devel}
 %{?with_numarray:BuildRequires:	python-numarray-devel}
-%{?with_numeric:BuildRequires:	python-numpy-devel}
 BuildRequires:	qwt-devel >= 4.2.0-3
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 Requires:	python-PyQt
+%{?with_numeric:Requires:	python-Numeric}
 %{?with_numarray:Requires:	python-numarray}
-%{?with_numeric:Requires:	python-numpy}
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
