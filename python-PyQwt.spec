@@ -5,7 +5,7 @@
 #
 %define		module	PyQwt
 Summary:	Python bindings for the Qwt library
-Summary(pl):	Wi±zania Pythona do biblioteki Qwt
+Summary(pl.UTF-8):   WiÄ…zania Pythona do biblioteki Qwt
 Name:		python-%{module}
 Version:	4.2
 Release:	0.1
@@ -36,16 +36,16 @@ applications. It provides a widget to plot 2-dimensional data and
 various widgets to display and control bounded or unbounded floating
 point values.
 
-%description -l pl
-PyQwt to zbiór wi±zañ Pythona do biblioteki klas C++ Qwt,
-rozszerzaj±cej szkielet Qt o widgety dla aplikacji naukowych i
-in¿ynierskich. Udostêpnia widget do wykresów danych 2-wymiarowych i
-ró¿ne widgety do wy¶wietlania i zmiany ograniczonych i
-nieograniczonych warto¶ci zmiennoprzecinkowych.
+%description -l pl.UTF-8
+PyQwt to zbiÃ³r wiÄ…zaÅ„ Pythona do biblioteki klas C++ Qwt,
+rozszerzajÄ…cej szkielet Qt o widgety dla aplikacji naukowych i
+inÅ¼ynierskich. UdostÄ™pnia widget do wykresÃ³w danych 2-wymiarowych i
+rÃ³Å¼ne widgety do wyÅ›wietlania i zmiany ograniczonych i
+nieograniczonych wartoÅ›ci zmiennoprzecinkowych.
 
 %package devel
 Summary:	Files needed to build other bindings based on PyQwt
-Summary(pl):	Pliki potrzebne do tworzenia innych wi±zañ w oparciu o PyQwt
+Summary(pl.UTF-8):   Pliki potrzebne do tworzenia innych wiÄ…zaÅ„ w oparciu o PyQwt
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	python-sip-devel
@@ -53,20 +53,20 @@ Requires:	python-sip-devel
 %description devel
 Files needed to build other bindings based on PyQwt.
 
-%description devel -l pl
-Pliki potrzebne do tworzenia innych wi±zañ w oparciu o PyQwt.
+%description devel -l pl.UTF-8
+Pliki potrzebne do tworzenia innych wiÄ…zaÅ„ w oparciu o PyQwt.
 
 %package examples
 Summary:	Examples for PyQwt
-Summary(pl):	Przyk³ady do PyQwt
+Summary(pl.UTF-8):   PrzykÅ‚ady do PyQwt
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Examples code demonstrating how to use the Python bindings for Qwt.
 
-%description examples -l pl
-Przyk³adowy kod demonstruj±cy sposób u¿ycia wi±zañ Pythona do Qwt.
+%description examples -l pl.UTF-8
+PrzykÅ‚adowy kod demonstrujÄ…cy sposÃ³b uÅ¼ycia wiÄ…zaÅ„ Pythona do Qwt.
 
 %prep
 %setup -q -n %{module}-%{version}
