@@ -5,7 +5,7 @@
 #
 %define		module	PyQwt
 Summary:	Python bindings for the Qwt library
-Summary(pl.UTF-8):   Wiązania Pythona do biblioteki Qwt
+Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Qwt
 Name:		python-%{module}
 Version:	4.2
 Release:	0.1
@@ -45,7 +45,7 @@ nieograniczonych wartości zmiennoprzecinkowych.
 
 %package devel
 Summary:	Files needed to build other bindings based on PyQwt
-Summary(pl.UTF-8):   Pliki potrzebne do tworzenia innych wiązań w oparciu o PyQwt
+Summary(pl.UTF-8):	Pliki potrzebne do tworzenia innych wiązań w oparciu o PyQwt
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 Requires:	python-sip-devel
@@ -58,7 +58,7 @@ Pliki potrzebne do tworzenia innych wiązań w oparciu o PyQwt.
 
 %package examples
 Summary:	Examples for PyQwt
-Summary(pl.UTF-8):   Przykłady do PyQwt
+Summary(pl.UTF-8):	Przykłady do PyQwt
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
