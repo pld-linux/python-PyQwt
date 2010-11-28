@@ -7,12 +7,12 @@
 Summary:	Python bindings for the Qwt library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Qwt
 Name:		python-%{module}
-Version:	5.1.0
-Release:	0.1
+Version:	5.2.0
+Release:	1
 License:	GPL v2+
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/pyqwt/%{module}-%{version}.tar.gz
-# Source0-md5:	c9d662a0d4fc95cec75d3c526e4e748a
+Source0:	http://downloads.sourceforge.net/pyqwt/%{module}-%{version}.tar.gz
+# Source0-md5:	fcd6c6029090d473dcc9df497516eae7
 URL:		http://pyqwt.sourceforge.net/
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -27,7 +27,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %{?with_numeric:Requires:	python-Numeric}
 Requires:	python-PyQt4
-%{?with_numarray:Requires:	python-numarray}
+%{?with_numarray:Requires:	python-numpy-numarray}
 %pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,7 +79,8 @@ Przykładowy kod demonstrujący sposób użycia wiązań Pythona do Qwt.
 export QTDIR=%{_prefix}
 cd configure
 python configure.py \
-	-Q ../qwt-5.1
+	-Q ../qwt-5.2 \
+	-I %{_includedir}/qwt
 
 %{__make}
 
@@ -97,7 +98,7 @@ cd ..
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}
 %py_postclean
 
-rm -f examples/{iqt,qwt}
+#rm -f examples/{iqt,qwt}
 cp -R qt4examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
@@ -105,10 +106,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Doc/html/pyqwt
+#%doc Doc/html/pyqwt
 %dir %{py_sitedir}/PyQt4/Qwt5
 %attr(755,root,root) %{py_sitedir}/PyQt4/Qwt5/*.so
 %{py_sitedir}/PyQt4/Qwt5/*.py[co]
+%{py_sitedir}/PyQt4/uic/widget-plugins/qwt.pyc
+%{py_sitedir}/PyQt4/uic/widget-plugins/qwt.pyo
 
 %files devel
 %defattr(644,root,root,755)
