@@ -18,10 +18,11 @@ BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
 BuildRequires:	QtSvg-devel
 %{?with_numeric:BuildRequires:	python-Numeric-devel}
+BuildRequires:	python-PyQt4
 BuildRequires:	python-devel >= 1:2.3
-%{?with_numarray:BuildRequires:	python-numpy-numarray-devel}
 BuildRequires:	python-sip-devel
-BuildRequires:	qwt-devel >= 4.2.0-3
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sip-PyQt4
