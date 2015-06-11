@@ -2,13 +2,13 @@
 # Conditional build:
 %bcond_with	numeric		# build with Python Numeric extend
 %bcond_without	numarray	# build without Python numarray extend
-#
+
 %define		module	PyQwt
 Summary:	Python bindings for the Qwt library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Qwt
 Name:		python-%{module}
 Version:	5.2.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	http://downloads.sourceforge.net/pyqwt/%{module}-%{version}.tar.gz
@@ -18,17 +18,17 @@ BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
 BuildRequires:	QtSvg-devel
 %{?with_numeric:BuildRequires:	python-Numeric-devel}
-BuildRequires:	python-PyQt4-devel
 BuildRequires:	python-devel >= 1:2.3
 %{?with_numarray:BuildRequires:	python-numpy-numarray-devel}
 BuildRequires:	python-sip-devel
 BuildRequires:	qwt-devel >= 4.2.0-3
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	sip-PyQt4
 %{?with_numeric:Requires:	python-Numeric}
 Requires:	python-PyQt4
+Requires:	python-libs
 %{?with_numarray:Requires:	python-numpy-numarray}
-%pyrequires_eq	python-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sipfilesdir	%{_datadir}/sip
