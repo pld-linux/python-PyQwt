@@ -8,7 +8,7 @@ Summary:	Python bindings for the Qwt library
 Summary(pl.UTF-8):	Wiązania Pythona do biblioteki Qwt
 Name:		python-%{module}
 Version:	5.2.0
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries/Python
 Source0:	http://downloads.sourceforge.net/pyqwt/%{module}-%{version}.tar.gz
